@@ -425,6 +425,31 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+h1{
+  font-family: Bellefair, serif;
+  font-size: 8rem;
+  line-height: 1;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+h2{
+  font-family: Bellefair, serif;
+  font-size: 6.25rem;
+}
+
+h3{
+  font-family: Bellefair, serif;
+  font-size: 3.5rem;
+}
+
+a{
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
 *, ::before, ::after{
   --tw-translate-x: 0;
   --tw-translate-y: 0;
@@ -519,14 +544,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-no-repeat{
   background-repeat: no-repeat;
-}
-
-.font-barlow{
-  font-family: Barlow Condensed, sans-serif;
-}
-
-.font-bellefair{
-  font-family: Bellefair, serif;
 }
 
 .home-bg {
