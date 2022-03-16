@@ -6,33 +6,74 @@
 
 	<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
 
+	<title>Space tourism website</title>
+
 	<link href="/dist/output.css" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  
-  	<title>Frontend Mentor | Space tourism website</title>
 </head>
-<body class="home-bg bg-scroll bg-no-repeat bg-cover">
-	<div class="container mx-auto">
+<body class="home-bg bg-fixed bg-no-repeat bg-cover">
+	<main>
 
-		00 Home
-		01 Destination
-		02 Crew
-		03 Technology
-	  
-		So, you want to travel to
-		<h1 class="">Space</h1>
-		Let’s face it; if you want to go to space, you might as well genuinely go to 
-		outer space and not hover kind of on the edge of it. Well sit back, and relax 
-		because we’ll give you a truly out of this world experience!
-	  
-		Explore
+		<nav id="navigation" class="w-full z-30 absolute top-10 text-white">
+			<div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+				<div class="pl-4 flex items-center ml-10">
+					<a href="#">
+						<!--Icon from: http://www.potlabicons.com/ -->
+						<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" r="24" fill="#FFF"/><path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"/></g></svg>
+					</a>
+				</div>
+				<div class="block lg:hidden pr-4">
+						<button id="nav-toggle" class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+							<svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+								<title>Menu</title>
+								<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+							</svg>
+						</button>
+				</div>
+				<div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+					<ul class="menu lg:flex justify-end flex-1 items-center px-4 py-4">
+						<li class="mr-3">
+							<a class="inline-block py-2 px-4 no-underline" href="index.html"><span class="font-bold mr-2">00</span>Home</a>
+						</li>
+						<li class="mr-3">
+							<a class="inline-block py-2 px-4 no-underline" href="#"><span class="font-bold mr-2">01</span>Destination</a>
+						</li>
+						<li class="mr-3">
+							<a class="inline-block py-2 px-4 no-underline" href="crew-commander.html"><span class="font-bold mr-2">02</span>Crew</a>
+						</li>
+						<li class="mr-3">
+							<a class="inline-block py-2 px-4 no-underline" href="#"><span class="font-bold mr-2">03</span>Technology</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
-	</div>
+		<div class="pt-40 md-pt-96">
+			<div class="w-full px-3 px-10 sm-pl-10 md-pl-64 flex flex-wrap flex-col md:flex-row items-end">
+				<div class="flex flex-col w-full md:w-1/2 justify-center md-items-start text-center md:text-left pb-10">
+					<h5 class="text-base md:text-h5xl">So, you want to travel to</h5>
+					<h1 class="text-h1base md:text-h1xl">Space</h1>
+					<p class="text-base15 text-white text-justify">Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
+				</div>
+	
+				<div class=" flex w-full md:w-2/5 justify-center md-justify-end">
+					<button class="bg-white hover:bg-white button-has-hover text-black text-xl md:text-3xl uppercase rounded-full">Explore</button>
+				</div>
+				
+			</div>
+		</div>
+	
 
 
 
+
+	</main>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
 
 </body>
 </html>

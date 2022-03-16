@@ -1,34 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap');
 
 @tailwind base;
 
 @layer base {
-      h1 {
-            @apply font-bellefair;
-            @apply text-9xl;
+      body {
+            @apply font-barlow-regular;
+            
+      }
+      h1, h2, h3, h4, h5 {
             @apply text-white;
+            @apply uppercase;
+      }
+      h1, h2, h3, h4 {
+            @apply font-bellefair;
       }
       h2 {
-         @apply font-bellefair;
-            @apply text-h2md;
+            @apply text-h2xl;
       }
       h3 {
-            @apply font-bellefair;
-            @apply text-h3md;
+            @apply text-h3xl;
       }
-      a {
-        @apply text-blue-600 underline;
+      h4 {
+            @apply text-h4xl;
       }
- }
+      h5 {
+            @apply font-barlow;
+            @apply tracking-wide2;
+      }
+      p {
+            line-height: 32px;
+      }
+      nav {
+            @apply font-barlow;
+      }
+      
+}
+
+
 
 
 @tailwind components;
 @tailwind utilities;
 
+
+
+
 .home-bg {
       min-height: 100vh;
       background-image: url(/src/assets/home/background-home-desktop.jpg);
 }
+
+div#nav-content:before {
+      content: '';
+      border: 0.1px solid white;
+      width: 35%;
+      position: absolute;
+      left: 18%;
+}
+ul.menu:before {
+      content: '';
+      right: 0;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(81.5485px);
+      /* Note: backdrop-filter has minimal browser support */
+      height: 80px;
+      width: 50%;
+      position: absolute;
+      z-index: -1;
+}
+.menu a {
+      position: relative;
+      @apply uppercase;
+      @apply tracking-widest;
+      @apply text-white;
+}
+.menu a:hover:before {
+      content: '';
+      border-bottom: 2px solid rgb(255 255 255 / 53%);
+      position: absolute;
+      width: 100%;
+      bottom: -22px;
+      left: 0;
+      right: 0;
+}
+
+.menu a.active:before {
+      content: '';
+      border-bottom: 2px solid #fff;
+      position: absolute;
+      width: 100%;
+      bottom: -22px;
+      left: 0;
+      right: 0;
+}
+
+.button-has-hover {
+      position: relative;
+      height: 150px;
+      width: 150px;
+      @apply font-bellefair;
+      z-index: 1;
+      border: none;
+      transition: box-shadow 400ms cubic-bezier(0.2, 0, 0.7, 1), transform 200ms cubic-bezier(0.2, 0, 0.7, 1);
+}
+
+.button-has-hover:hover {
+      box-shadow: 0 0 1px 50px rgb(255 255 255 / 27%);
+}
+
 
 @media (max-width: 640px) {
       .home-bg {
@@ -40,4 +119,12 @@
       .home-bg {
             background-image: url(/src/assets/home/background-home-tablet.jpg);
       }
+}
+
+@media (min-width: 768px) { 
+      .button-has-hover {
+            height: 220px;
+            width: 220px;
+      }
+      
 }
