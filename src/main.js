@@ -8,3 +8,9 @@ jQuery(function($) {
 });
 
 
+const hamburger = document.getElementById('nav-toggle');
+const navigation = document.getElementById('menu-container');
+
+hamburger.addEventListener('click', () =>  {
+      navigation.classList.toggle('show');
+});

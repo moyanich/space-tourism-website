@@ -115,12 +115,6 @@ ul.menu:before {
       }
 }
 
-@media (max-width: 768px) { 
-      .home-bg {
-            background-image: url(/src/assets/home/background-home-tablet.jpg);
-      }
-}
-
 @media (min-width: 768px) { 
       .button-has-hover {
             height: 220px;
@@ -128,3 +122,16 @@ ul.menu:before {
       }
       
 }
+
+
+@media (max-width: 768px) { 
+      #menu-container.show {
+            display: flex;
+      }
+
+      
+      .home-bg {
+            background-image: url(/src/assets/home/background-home-tablet.jpg);
+      }
+}
+
